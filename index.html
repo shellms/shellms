@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+
+    <div class="admin-dashboard">
+        <div class="head">
+            <h1>Admin Dashboard</h1>
+            <p>Members Management System</p>
+        </div>
+        <div class="user-input">
+            <div class="personal">
+                <INPUT type="hidden" name="UserID" id="ACCOUNT" value="" MAXLENGTH=16 SIZE=16 readonly>
+                <input type="text" placeholder="UserName" id="username">
+                <input type="email" placeholder="Email Address" id="email">
+            </div>
+            <div class="personal">
+                <input type="password" placeholder="Password" id="password">
+                <input type="number" placeholder="Phone Number" id="number">
+            </div>
+            <input type="url" placeholder="Facebook Account URL" id="fb">
+            <input type="text" placeholder="Committee" id="committee">
+            <button id="submit">Create</button>
+        </div>
+        <div class="user-data">
+            <div class="searchBlock">
+                <input type="text" id="search" placeholder="Search">
+                <div class="btnSearch">
+                    <button id="searchUser">Search by Username</button>
+                    <button id="searchCommittee">Search by Committee</button>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th>UserID</th>
+                    <th>UserName</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Facebook Account</th>
+                    <th>Committee</th>
+                    <th>Password</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+
+                <tbody id="tbody">
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+    
+</body>
+
+<script src="script.js"></script>
+</html>
